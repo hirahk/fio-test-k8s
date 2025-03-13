@@ -1,10 +1,9 @@
-# fio-test-k8s
 # fio test in Kubernetes
 
 ## ファイルの説明
 
 fio-job-config.yaml
-fioパラメータをconfigMapとして作成
+* fioパラメータをconfigMapとして作成
 
 fio.yaml
-PersistentClaimVolumeの作成とfioを含むAlpine LinuxベースのPodをDeploymentで作成
+* PersistentClaimVolumeの作成とfioを含むAlpine LinuxベースのPodをDeploymentで作成
