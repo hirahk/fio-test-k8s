@@ -10,5 +10,5 @@ fio.yaml
 * ログインの仕方：oc exec -it <pod_name> -- /bin/sh
 
 centos.yaml
-* CentOSベースの単純なLinux Pod
+* CentOSベースの単純なLinux Pod (fioは含まず)
 * ログインの仕方：oc exec -it <pod_name> -- /bin/bash
