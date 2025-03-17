@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: centos
+  annotations: {}
+spec:
+  selector:
+    matchLabels:
+      app: centos
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: centos
+    spec:
+      containers:
+        - name: centos
+          image: centos:latest
+          command: ["/bin/sleep", "3600"]
+          volumeMounts:
+          - name: vol1
+            mountPath: /mnt/vol1
+          - name: vol2
+            mountPath: /mnt/vol2
+      volumes:
+      - name: vol1
+        persistentVolumeClaim:
+          claimName: pvc-centos-1
+      - name: vol2
+        persistentVolumeClaim:
+          claimName: pvc-centos-2
